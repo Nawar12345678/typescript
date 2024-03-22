@@ -1,8 +1,10 @@
+///<reference lib = "es2015" />
 var Contact = /** @class */ (function () {
-    function Contact(name, email, phone) {
+    function Contact(name, email, phone, group) {
         this.name = name;
         this.email = email;
         this.phone = phone;
+        this.group = group;
     }
     return Contact;
 }());
@@ -47,15 +49,16 @@ var AddressBook = /** @class */ (function () {
             console.log("Name: ".concat(contact.name));
             console.log("Email: ".concat(contact.email));
             console.log("Phone: ".concat(contact.phone));
+            console.log("Group: ".concat(contact.group));
             console.log("-----");
         }
     };
     return AddressBook;
 }());
 var addressBook = new AddressBook();
-var contact1 = new Contact("John Doe", "johndoe@example.com", "123-456-7890");
-var contact2 = new Contact("Alice Smith", "alice.smith@invalid", "456-789-0123");
-var contact3 = new Contact("", "valid@email.com", "789-012-3456");
+var contact1 = new Contact("John Doe", "johndoe@example.com", "123-456-7890", "Group1");
+var contact2 = new Contact("Alice Smith", "alice.smith@invalid", "456-789-0123", "Group2");
+var contact3 = new Contact("", "valid@email.com", "789-012-3456", "Group3");
 addressBook.addContact(contact1);
 try {
     addressBook.addContact(contact2); // This will throw an error (invalid email)
