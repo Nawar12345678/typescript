@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "lib" : ["es2016.array.include", "es2016", "dom"],
+        "module": "commonjs",
+        "strict": true,
+        "esModuleInterop": true 
+    },
+    "include": [
+        "Task.ts"
+    ],
+    "exclude": [
+        "node_modules" 
+    ]
+}
